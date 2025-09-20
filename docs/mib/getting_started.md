@@ -185,9 +185,25 @@ Now you can choose any of the free GPUs (6 or 7 in this case) for your tasks. In
 
 1. **Always check availability first** with `nvidia-smi`
 
-2. **Prioritize higher-numbered GPUs** i.e. (6, 7), as others may forgot to select specific GPUs and occupy lower-numbered ones (0-3)
+2. **Prioritize higher-numbered GPUs** i.e. (6, 7), as others may forget to select specific GPUs and occupy lower-numbered ones (0-3). In addition, GPUs 0-3 are in the same block, while 4-7 are in another block. Whenever possible, try to use GPUs from the same block for multi-GPU training.
 
 4. **Check for idle processes** - if you see memory allocated but 0% utilization for extended periods, consider reaching out to the user or David. 
+
+??? tip "GPU Interconnect Topology"
+    The RTX PRO 6000 GPUs are connected in a hybrid topology:
+    
+    |      | GPU0 | GPU1 | GPU2 | GPU3 | GPU4 | GPU5 | GPU6 | GPU7 | CPU Affinity    |
+    |------|------|------|------|------|------|------|------|------|-----------------|
+    | GPU0 | X    | NODE | NODE | NODE | SYS  | SYS  | SYS  | SYS  | 0-31,64-95      |
+    | GPU1 | NODE | X    | NODE | NODE | SYS  | SYS  | SYS  | SYS  | 0-31,64-95      |
+    | GPU2 | NODE | NODE | X    | NODE | SYS  | SYS  | SYS  | SYS  | 0-31,64-95      |
+    | GPU3 | NODE | NODE | NODE | X    | SYS  | SYS  | SYS  | SYS  | 0-31,64-95      |
+    | GPU4 | SYS  | SYS  | SYS  | SYS  | X    | NODE | NODE | NODE | 32-63,96-127    |
+    | GPU5 | SYS  | SYS  | SYS  | SYS  | NODE | X    | NODE | NODE | 32-63,96-127    |
+    | GPU6 | SYS  | SYS  | SYS  | SYS  | NODE | NODE | X    | NODE | 32-63,96-127    |
+    | GPU7 | SYS  | SYS  | SYS  | SYS  | NODE | NODE | NODE | X    | 32-63,96-127    |
+
+    GPUs with `node` connection have faster link speed than `sys` connection. For multi-GPU training, try to use GPUs within the same block (0-3 or 4-7) for better performance.
 
 ### Controlling GPU Access with CUDA_VISIBLE_DEVICES
 
