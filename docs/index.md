@@ -2,7 +2,7 @@
 
 First of all, welcome to the Multisensory Intelligence (MI) group! We are excited to have you here and look forward to collaborating with you on various projects.
 
-This documentation is designed to provide you with all the necessary information and resources to get started with our projects. Whether you are a new member or an experienced researcher, you will find valuable insights and tools here.
+This documentation is designed to provide you with all the necessary information and resources to get started with our projects. 
 
 ## Available Resources
 
