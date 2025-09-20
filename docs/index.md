@@ -2,7 +2,7 @@
 
 First of all, welcome to the Multisensory Intelligence (MI) group! We are excited to have you here and look forward to collaborating with you on various projects.
 
-This documentation is designed to provide you with all the necessary information and resources to get started with our projects. 
+This documentation is designed to provide you with all the necessary information and resources to get started with our projects.
 
 ## Available Resources
 
@@ -28,3 +28,8 @@ After you choose a server, please refer to the following documentation for instr
 
 - [Getting Started with Engaging](engaging/getting_started.md)
 - [Getting Started with MIB](mib/getting_started.md)
+
+
+## Server Status
+
+<iframe class="htframe" src="https://wl.hetrixtools.com/r/666536643c1984798aad61ef176dab79/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>

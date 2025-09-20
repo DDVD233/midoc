@@ -47,3 +47,6 @@ nav:
   - MIB:
       - Getting Started: mib/getting_started.md
       - Transfer Files: mib/transfer_files.md
+
+extra_javascript:
+  - https://static.hetrix.io/iframeResizer/iframeResizer.min.js
