@@ -268,7 +268,17 @@ python3 -c "import torch; print(f'GPU Name: {torch.cuda.get_device_name(0)}')"
     - `GPU Name: [Your GPU model]`
 
 
-## Transfer files
+## Storage and Transfer files
+
+The cluster provides different storage areas for different purposes:
+
+| Storage Type | Path | Quota | Backed up | Purpose/Notes |
+|--------------|------|-------|-----------|---------------|
+| Home Directory Flash | `/home/<username>` | 200 GB | Backed up with snapshots | Use for important files and software |
+| Pool Hard Disk | `/home/<username>/orcd/pool` | 1 TB | Disaster recovery backup | Storing larger datasets |
+| Scratch Flash | `/home/<username>/orcd/scratch` | 1 TB | Not backed up | Scratch space for I/O heavy jobs |
+
+On our node, we also have a total of 28TB NVMe SSD mounted at `/scratch`, which is not backed up. You can use this for high-speed temporary storage. This folder is not accessible from the login node.
 
 Checkout the [File Transfer Guide](/engaging/transfer_files) for instructions on transferring files to/from the cluster.
 

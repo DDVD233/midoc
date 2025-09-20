@@ -1,13 +1,11 @@
-The cluster provides different storage areas for different purposes:
+The MIB server has the following storage that are shared among users:
 
-| Storage Type | Path | Quota | Backed up | Purpose/Notes |
-|--------------|------|-------|-----------|---------------|
-| Home Directory Flash | `/home/<username>` | 200 GB | Backed up with snapshots | Use for important files and software |
-| Pool Hard Disk | `/home/<username>/orcd/pool` | 1 TB | Disaster recovery backup | Storing larger datasets |
-| Scratch Flash | `/home/<username>/orcd/scratch` | 1 TB | Not backed up | Scratch space for I/O heavy jobs |
+| Storage Location | Path | Capacity             | Purpose  |
+|-----------------|------|----------------------|---------|
+| Home Directory | `/home/<username>` | 50 GB per user       | Scripts, code, small files |
+| Scratch Storage | `/scratch` | 28 TB shared for all | Datasets, checkpoints, outputs |
 
-On our node, we also have a total of 28TB NVMe SSD mounted at `/scratch`, which is not backed up. You can use this for high-speed temporary storage. This folder is not accessible from the login node. 
-
+The `/scratch` directory is also soft linked to your home directory for convenience. You can access it via `~/scratch`.
 If you want to transfer files to/from this folder, you will likely need to first transfer to/from your personal storage (pool at `/home/<username>/orcd/pool`, or scratch at `/home/<username>/orcd/scratch`), then move files while on the compute node.
 
 #### Uploading Files to the Cluster
@@ -15,16 +13,16 @@ If you want to transfer files to/from this folder, you will likely need to first
 The easiest way to transfer files is using `rsync` over SSH. From your local machine, run:
 ```bash
 # Basic syntax
-rsync -avz <local_path> <mit_username>@orcd-login001.mit.edu:<remote_path>
+rsync -avz <local_path> <mit_username>@mib.media.mit.edu:<remote_path>
 
 # Upload a single file
-rsync -avz ~/Documents/data.csv dvdai@orcd-login001.mit.edu:~/
+rsync -avz ~/Documents/data.csv dvdai@mib.media.mit.edu:~/
 
 # Upload an entire directory
-rsync -avz ~/Documents/project/ dvdai@orcd-login001.mit.edu:~/project/
+rsync -avz ~/Documents/project/ dvdai@mib.media.mit.edu:~/project/
 
 # Upload with progress bar
-rsync -avz --progress ~/largefile.zip dvdai@orcd-login001.mit.edu:~/orcd/scratch
+rsync -avz --progress ~/largefile.zip dvdai@mib.media.mit.edu:~/
 ```
 
 Useful `rsync` flags:
@@ -43,10 +41,10 @@ From your local machine, use `rsync` to download files:
 
 ```bash
 # Download a file to current local directory
-rsync -avz dvdai@orcd-login001.mit.edu:~/results.csv ./
+rsync -avz dvdai@mib.media.mit.edu:~/results.csv ./
 
 # Download a directory
-rsync -avz dvdai@orcd-login001.mit.edu:~/project/ ~/Downloads/project/
+rsync -avz dvdai@mib.media.mit.edu:/scratch/project/ ~/Downloads/project/
 ```
 
 #### Downloading from the Internet
@@ -60,7 +58,7 @@ wget https://example.com/dataset.zip
 wget -O mydata.zip https://example.com/dataset.zip
 
 # Download to specific directory
-cd ~/orcd/scratch
+cd /scratch/datasets
 wget https://example.com/largefile.tar.gz
 ```
 
@@ -76,4 +74,4 @@ pip install kaggle
 kaggle datasets download -d dataset-name
 ```
 
-Back to the [Getting Started Guide](/engaging/getting_started).
+Back to the [Getting Started Guide](/mib/getting_started).
