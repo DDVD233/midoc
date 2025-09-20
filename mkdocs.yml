@@ -1,4 +1,48 @@
 site_name: MI Lab Resources
 site_url: https://mi-docs.dd.works
+site_description: >
+  Internal documentation for logging in, using the cluster,
+  submitting jobs, storage quotas, and troubleshooting.
+repo_url: https://github.com/DDVD233/midoc
+repo_name: DDVD233/midoc
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.sections       # group nav into sections
+    - navigation.expand         # expand sections by default
+    - navigation.top            # show back-to-top button
+    - navigation.instant        # instant page loads
+    - toc.integrate             # show page TOC in sidebar
+    - content.code.copy         # copy button for code
+    - search.highlight          # highlight matches
+    - search.suggest            # show suggestions
+    - search.share              # share search URL
+markdown_extensions:
+  - admonition                 # !!! note, warning, etc.
+  - pymdownx.details           # collapsible sections
+  - pymdownx.superfences       # tabbed code blocks
+  - pymdownx.tabbed:
+      alternate_style: true    # alternate tab style
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys              # <kbd>Ctrl</kbd>+<kbd>C</kbd>
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Engaging:
+      - Getting Started: engaging/getting_started.md
+      - Jupyter Access: engaging/jupyter_access.md
+      - Transfer Files: engaging/transfer_files.md
+  - MIB:
+      - Getting Started: mib/getting_started.md
