@@ -9,10 +9,10 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: indigo
+      primary: black
       accent: teal
     - scheme: slate
-      primary: indigo
+      primary: black
       accent: teal
       toggle:
         icon: material/weather-night
