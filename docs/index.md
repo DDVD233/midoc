@@ -1,17 +1,30 @@
-# Welcome to MkDocs
+# Welcome to Multisensory Intelligence Computing Resources Documentation!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+First of all, welcome to the Multisensory Intelligence (MI) group! We are excited to have you here and look forward to collaborating with you on various projects.
 
-## Commands
+This documentation is designed to provide you with all the necessary information and resources to get started with our projects. Whether you are a new member or an experienced researcher, you will find valuable insights and tools here.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Available Resources
 
-## Project layout
+As of now, we have two main GPU servers available for use:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. **Engaging**: This is a server node hosted on the MIT Engaging cluster. It has 8 NVIDIA H200 GPUs, each with 144GB of memory. 
+
+2. **MIB** (**M**ultisensory **I**ntelligence **B**lackwell Server): This is a new server node hosted on the Media Lab cluster. It has 8 NVIDIA RTX 6000 Blackwell MaxQ GPUs, each with 96GB of memory.
+
+In addition, MIT also offers complimentary GPU access, where you can directly request via slurm. 
+
+## Choosing the Right Server
+
+Generally, we recommend choosing the server that is less busy at the time you need it. However, you may want to consider the following factors:
+
+1. **Access**: Engaging is configured with Slurm, while MIB allows direct SSH access. If your workflow uses VSCode or other IDEs that require direct access, MIB might be the better choice.
+2. **GPU Memory**: If your tasks require more GPU memory (>96GB), then Engaging is the better option.
+3. **Framework Compatibility**: MIB has the latest Blackwell GPUs, which requires a minimal CUDA version of 12.8. If your code relies on older Pytorch, Engaging might be more compatible.
+
+## Getting Started
+
+After you choose a server, please refer to the following documentation for instructions on how to set up your environment and start using the resources:
+
+- [Getting Started with Engaging](engaging/getting_started.md)
+- [Getting Started with MIB](mib/getting_started.md)
