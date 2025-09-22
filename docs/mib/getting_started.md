@@ -6,6 +6,8 @@ The MIB Server is a shared computational resource with 8 NVIDIA RTX PRO 6000 GPU
 
 ## MIB Server GPU Utilization Dashboard
 
+<iframe src="http://mib.media.mit.edu:3000/d-solo/bdl3vqwxprhtsa/nvitop-dashboard?orgId=1&timezone=browser&var-hostname=$__all&var-username=$__all&refresh=5s&theme=dark&panelId=8&__feature.dashboardSceneSolo=true" width="900" height="100" frameborder="0"></iframe>
+
 <iframe src="http://mib.media.mit.edu:3000/d-solo/6c02270b-3b32-41c5-9ab1-4bed0f89bc3e/mib-status?orgId=1&timezone=browser&theme=dark&panelId=1&__feature.dashboardSceneSolo=true" width="900" height="220" frameborder="0"></iframe>
 
 <iframe src="http://mib.media.mit.edu:3000/d-solo/6c02270b-3b32-41c5-9ab1-4bed0f89bc3e/mib-status?orgId=1&timezone=browser&theme=dark&panelId=2&__feature.dashboardSceneSolo=true" width="900" height="220" frameborder="0"></iframe>
