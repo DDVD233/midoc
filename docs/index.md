@@ -4,6 +4,12 @@ First of all, welcome to the Multisensory Intelligence (MI) group! We are excite
 
 This documentation is designed to provide you with all the necessary information and resources to get started with our projects.
 
+## MIB Server GPU Utilization Dashboard
+
+<iframe src="http://mib.media.mit.edu:3000/d-solo/6c02270b-3b32-41c5-9ab1-4bed0f89bc3e/mib-status?orgId=1&timezone=browser&theme=dark&panelId=1&__feature.dashboardSceneSolo=true" width="900" height="220" frameborder="0"></iframe>
+
+<iframe src="http://mib.media.mit.edu:3000/d-solo/6c02270b-3b32-41c5-9ab1-4bed0f89bc3e/mib-status?orgId=1&timezone=browser&theme=dark&panelId=2&__feature.dashboardSceneSolo=true" width="900" height="220" frameborder="0"></iframe>
+
 ## Available Resources
 
 As of now, we have two main GPU servers available for use:
@@ -28,8 +34,3 @@ After you choose a server, please refer to the following documentation for instr
 
 - [Getting Started with Engaging](engaging/getting_started.md)
 - [Getting Started with MIB](mib/getting_started.md)
-
-
-## Server Status
-
-<iframe class="htframe" src="https://wl.hetrixtools.com/r/666536643c1984798aad61ef176dab79/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
