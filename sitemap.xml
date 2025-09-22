@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mi-docs.dd.works/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://mi-docs.dd.works/engaging/getting_started/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://mi-docs.dd.works/engaging/jupyter_access/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://mi-docs.dd.works/engaging/transfer_files/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://mi-docs.dd.works/mib/getting_started/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+    <url>
+         <loc>https://mi-docs.dd.works/mib/transfer_files/</loc>
+         <lastmod>2025-09-22</lastmod>
+    </url>
+</urlset>
